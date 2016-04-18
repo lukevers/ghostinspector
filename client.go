@@ -41,7 +41,7 @@ func New(config *Config) *Client {
 // response parameter should be an empty struct in the format of the response
 // expected. If an error occurs, the error return value will contain the error
 // given from the Ghost Inspector API.
-func (c *Client) Get(path string, options []string, response interface{}) (*http.Response, error) {
+func (c *Client) Get(path string, options []string, R interface{}) (*http.Response, error) {
 	// Gather options
 	opts := "apiKey=" + c.config.ApiKey
 	for _, o := range options {
@@ -81,7 +81,7 @@ func (c *Client) Get(path string, options []string, response interface{}) (*http
 		return resp, errors.New(fmt.Sprintf("%s: %s", er.ErrorType, er.Message))
 	} else {
 		// If there's no error, unmarshal into the type that was given
-		json.Unmarshal(body, &response)
+		json.Unmarshal(body, &R)
 		return resp, nil
 	}
 }
