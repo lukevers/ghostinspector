@@ -19,8 +19,7 @@ type Client struct {
 	Suites *SuiteService
 }
 
-// A generic response type to check for errors
-type Response struct {
+type response struct {
 	Code string `json:"code"`
 }
 
@@ -73,7 +72,7 @@ func (c *Client) Get(path string, options []string, response interface{}) (*http
 	}
 
 	// Check response type for ERROR
-	r := &Response{}
+	r := &response{}
 	var er *Error
 	json.Unmarshal(body, &r)
 	if r.Code == "ERROR" {
