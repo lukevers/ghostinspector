@@ -1,2 +1,3 @@
 # ghostinspector
-A Ghost Inspector API for Go
+
+A Ghost Inspector SDK written in Go ([GoDoc](https://godoc.org/github.com/lukevers/ghostinspector)).
