@@ -23,7 +23,7 @@ type response struct {
 	Code string `json:"code"`
 }
 
-// Create a new client
+// Create a new client with access to all services.
 func New(config *Config) *Client {
 	c := &Client{
 		client: http.DefaultClient,

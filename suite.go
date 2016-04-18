@@ -25,6 +25,7 @@ type SuiteListResponse struct {
 
 // Fetch an array of all the suites in your account.
 //
+// For more information about this API endpoint, visit:
 // https://ghostinspector.com/docs/api/suites/#list
 func (s *SuiteService) List() (*SuiteListResponse, error) {
 	res := SuiteListResponse{}
@@ -40,6 +41,7 @@ type SuiteGetResponse struct {
 
 // Fetch a single suite from your account.
 //
+// For more information about this API endpoint, visit:
 // https://ghostinspector.com/docs/api/suites/#get
 func (s *SuiteService) Get(id string) (*SuiteGetResponse, error) {
 	res := SuiteGetResponse{}
