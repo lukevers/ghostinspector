@@ -5,5 +5,7 @@ import (
 )
 
 var (
-	API_KEY = os.Getenv("API_KEY")
+	client = New(&Config{
+		ApiKey: os.Getenv("API_KEY"),
+	})
 )
