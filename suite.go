@@ -17,7 +17,7 @@ type Suite struct {
 	Name         string       `json:"name"`
 }
 
-// The response struct for calling List
+// The response struct for calling *SuiteService.List
 type SuiteListResponse struct {
 	Code string  `json:"code"`
 	Data []Suite `json:"data"`
@@ -32,7 +32,7 @@ func (s *SuiteService) List() (*SuiteListResponse, error) {
 	return &res, err
 }
 
-// The response struct when calling Get
+// The response struct when calling *SuiteService.Get
 type SuiteGetResponse struct {
 	Code string `json:"code"`
 	Data Suite  `json:"data"`
