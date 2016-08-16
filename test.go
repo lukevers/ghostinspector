@@ -4,14 +4,16 @@ import (
 	"fmt"
 )
 
+// Test contains information regarding one specific test.
 type Test struct {
 	Gi   *GhostInspector
-	Id   string `json:"_id"`
+	ID   string `json:"_id"`
 	Name string `json:"name"`
 }
 
-func (t *Test) Execute(startUrl string, immediate bool, viewport *Viewport, userAgent string, vars string) (interface{}, error) {
-	args := fmt.Sprintf("startUrl=%s&immediate=%b", startUrl, immediate)
+// Execute runs one specific test.
+func (t *Test) Execute(startURL string, immediate bool, viewport *Viewport, userAgent string, vars string) (interface{}, error) {
+	args := fmt.Sprintf("startUrl=%s&immediate=%b", startURL, immediate)
 	if viewport != nil {
 		args = fmt.Sprintf("%s&viewport=%dx%d", args, viewport.Width, viewport.Width)
 	}
@@ -24,7 +26,7 @@ func (t *Test) Execute(startUrl string, immediate bool, viewport *Viewport, user
 		args = fmt.Sprintf("%s&%s", args, vars)
 	}
 
-	response, err := t.Gi.Get(fmt.Sprintf("/tests/%s/execute/", t.Id), args)
+	response, err := t.Gi.Get(fmt.Sprintf("/tests/%s/execute/", t.ID), args)
 	if err != nil {
 		return nil, err
 	}

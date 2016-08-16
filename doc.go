@@ -1,5 +1,5 @@
 /*
-This package provides a basic API wrapper around the Ghost Inspector API.
+Package ghostinspector provides a basic API wrapper around the Ghost Inspector API.
 
 Usage:
 
