@@ -1,5 +1,3 @@
-package ghostinspector
-
 /*
 This package provides a basic API wrapper around the Ghost Inspector API.
 
@@ -12,3 +10,4 @@ get from your dashboard.
 
 	gi := ghostinspector.New("api_key")
 */
+package ghostinspector
