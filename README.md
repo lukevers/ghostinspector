@@ -1,3 +1,5 @@
 # ghostinspector
 
-A Ghost Inspector SDK written in Go ([GoDoc](https://godoc.org/github.com/lukevers/ghostinspector)).
+[![GoDoc](https://godoc.org/github.com/lukevers/ghostinspector?status.svg)](https://godoc.org/github.com/lukevers/ghostinspector)
+
+An unofficial [Ghost Inspector](https://ghostinspector.com/) SDK written in Go.
