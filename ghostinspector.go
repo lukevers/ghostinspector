@@ -15,7 +15,7 @@ type GhostInspector struct {
 	apikey string
 }
 
-// New creates a new *GhostInspector
+// New creates a new Ghost Inspector client that can be used to send requests.
 func New(apikey string) *GhostInspector {
 	return &GhostInspector{
 		apikey: apikey,
