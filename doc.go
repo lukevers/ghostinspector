@@ -2,6 +2,11 @@
 Package ghostinspector provides a basic API wrapper around the Ghost Inspector
 API.
 
+Note: This package currently uses interfaces to unmarshal JSON in a lot of
+places. Version 2 of this package is going to have complete defined structs in
+all locations possbile (Suites, Tests, ...) to provide a better SDK to work
+with.
+
 Usage:
 
 	import "github.com/lukevers/ghostinspector"
